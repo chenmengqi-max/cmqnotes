@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul > li:first-child{
+            color:red;
+        }
+        ul > li:first-of-type{
+            color:red;
+        }
+        /*ul   >   li:nth-child(n){*/
+        /*    color:green;*/
+        /*}*/
+        ul > li:not(:nth-child(3)){
+        color:blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+<!--        <span>我是span</span>-->
+        <li>第一个</li>
+        <li>第二个</li>
+
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+
+    </ul>
+</body>
+</html>
