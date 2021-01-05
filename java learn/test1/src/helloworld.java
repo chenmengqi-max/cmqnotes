@@ -2,21 +2,33 @@
  * @author： 上海大学-15122657陈孟琦
  * @date： 2020/12/2 - 17:06
  */
-
+import java.util.Scanner;
 public class helloworld {
     public static void main(String[] args) {
-        int q = 2, w = 4;
-        sum(4, 7 );
-        System.out.println(sum(q,w));
-        System.out.println(q);
-        System.out.println(w);
+        System.out.println("请输入若干个数,每输入一个数用回车确认");
 
-    }
+        System.out.println("最后输入一个非数字结束输入操作");
 
+        Scanner reader=new Scanner(System.in);
 
-    public static int sum(int a, int b) {
-        int c;
-        c = a + b;
-        return c;
+        double sum=0;
+
+        int m=0;
+
+        while(reader.hasNextInt())
+
+        {
+
+            double x=reader.nextDouble();
+
+            m=m+1;
+
+            sum=sum+x;
+
+        }
+
+        System.out.printf("%d个数的和为%f\n",m,sum);
+
+        System.out.printf("%d个数的平均值是%f\n",m,sum/m);
     }
 }
