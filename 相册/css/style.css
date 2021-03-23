@@ -58,7 +58,7 @@ li{
 	-webkit-transform:rotateX(180deg) translateZ(50px);
 }
 .minbox li:nth-child(3){
-	background: url(../img/03.png) no-repeat 0 0;
+	background: url(../img/03.jpg) no-repeat 0 0;
 	-webkit-transform:rotateX(-90deg) translateZ(50px);
 }
 .minbox li:nth-child(4){
@@ -185,9 +185,9 @@ li{
 }
 @keyframes move{
 	0%{
-		-webkit-transform: rotateX(13deg) rotateY(0deg);
+		-webkit-transform: rotateX(13deg) rotateY(0deg) rotateZ(13deg);
 	}
 	100%{
-		-webkit-transform:rotateX(13deg) rotateY(360deg);
+		-webkit-transform:rotateX(13deg) rotateY(360deg) rotateZ(13deg);
 	}
 }

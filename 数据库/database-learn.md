@@ -26,7 +26,7 @@
 
 ​	在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。HAVING 子句可以让我们筛选分组后的各组数据。
 
-​	where只能使用在分组之后，不能单独使用，必须要跟group。意义是进行二次筛选。where是第一次筛选。
+​	having只能使用在分组之后，不能单独使用，必须要跟group。意义是进行二次筛选。where是第一次筛选。
 
 ## join
 
@@ -64,6 +64,10 @@ select * from n cross join a
 
 ​	通过给一张表进行重命名。
 
+### 自然连接
+
+​	natural join											
+
 ## exists
 
 ​	https://blog.csdn.net/wxf_suzhou/article/details/82962515
@@ -75,6 +79,8 @@ select * from n cross join a
 ​	例如：选修了全部课程的学生姓名。
 
 ​	s1 选修了所有课程 等同于 不存在一门课 s1 没选。 
+
+https://blog.csdn.net/yuanren201/article/details/89298068
 
 ```sql
 select sname from s
@@ -159,3 +165,95 @@ https://blog.csdn.net/gyc1105/article/details/8063624?utm_medium=distribute.pc_r
 https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2005/ms187074(v=sql.90)?redirectedfrom=MSDN
 
 < >ANY 运算符则不同于 NOT IN：< >ANY 表示不等于 a，或者不等于 b，或者不等于 c。NOT IN 表示不等于 a、不等于 b 并且不等于 c。<>ALL 与 NOT IN 表示的意思相同。
+
+# 关系代数运算
+
+​	五个基本运算是 ：并，差，积，选择和连接。别的运算可以用五个基本运算来描述。
+
+## 并
+
+​	并要求两个关系属性的性质必须一致。
+
+## 交
+
+​	R - (R - S)，不是基本运算。
+
+## 差
+
+​	R - S ，是R中但不是S中的。
+
+​	一般应用在“不使用****，没有选修*****”类似的语境问题。先找出了使用 /  选修了的，再用全集去减。
+
+## 积
+
+## 选择 select
+
+​	选择的是行，where的作用。选择符合条件的元组。
+
+## 投影 π
+
+​	自动消除重复行，把某一列或几列显示出来。 
+
+## 连接
+
+​	是笛卡尔积、选择和投影操作的组合。   
+
+## 除
+
+​	是笛卡尔积，投影，和差组合。
+
+# 关系演算
+
+## 原子公式
+
+原子公式是最小的公式，公式经过有限次运算仍是公式。
+
+# 复习汇总
+
+## 表的创建，修改和撤销
+
+  * create table A ( Pno char(4) not null,primary key(pno) );//创建及主键
+
+  * foreign key (pno) references J(Jno) ;//外键
+
+  * constraint y check （ x between 0 and 10000 );//检查约束 
+
+  * alter table 基本表名 add 新属性名 新属性类型完整性约束 //增加新的属性的句法
+
+  * 例如：alter table s add tele char(12);
+
+* alter table 基本表名 drop 属性名 [cascade|restrict];//删除原有的属性
+
+* alter table 基本表名 drop 约束名//删除指定的完整性约束
+
+* drop alter table 基本表名  [cascade|restrict] //删除基本表
+
+    
+
+## 创建视图
+
+		* create view 视图名(列表名1，列表名2···) as select 查询语句  //句法
+		* drop view 视图名 //视图的撤销
+		* 更新操作有三条规则：1.多个基本表连接操作导出的，不允许执行更新。2.导出视图时使用了分组和聚合操作，不允许更新。3.单个基本表使用选择投影导出的，并且包含了主键或某个候选键，这样的视图叫 行列子集视图，可以被执行更新操作。
+	
+	## 索引的创建和撤销
+	
+		* create index jno_index on J(JNO); //建立索引，表示对基本表J的列JNO建立索引，索引的名字为jno_index
+		* create unique index jno_index on J(JNO); //如果要求列JNO的值在基本表J中你不重复，那么添加保留字unique
+		* 一个索引键可以对应多个列，默认升序，可以降序。ASC/DESC
+		* drop index jno_index on J ; //撤销索引
+
+## 数据插入
+
+* insert into 基本表名 [(列名序列)] values （元组值）//必须包含所有的非空属性，需要字符的话需要加单引号。
+* insert into 基本表名 （列名序列） select语句 // 把select查询语句的查询结构插入到指定的基本表中。
+
+## 数据删除
+
+* delete from 基本表名 where 条件表达式 // 用于删除指定的基本表中满足条件表达式的元组，如果没有这个条件表达式，则会删除指定表中的所有元组。
+
+* 注意：delete语句只能从一个关系中删除元组，而不能一次从多个关系中删除元组，要删除多个元组，就要写多个delete语句。
+
+## 数据修改
+
+* update 基本表名 set 列名 = 表达式  where 条件表达式 //省略where的话会修改所有元组的相应属性列值。 
