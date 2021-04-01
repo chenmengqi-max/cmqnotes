@@ -1,0 +1,13 @@
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.exe
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.deps.json
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.runtimeconfig.json
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.runtimeconfig.dev.json
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.dll
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\bin\Debug\netcoreapp3.1\study2021-3-25.pdb
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.AssemblyInfo.cs
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.dll
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.pdb
+C:\Users\asus\Desktop\cmqnotes\C#\study2021-3-25\obj\Debug\netcoreapp3.1\study2021-3-25.genruntimeconfig.cache
