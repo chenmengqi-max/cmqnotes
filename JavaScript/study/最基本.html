@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--可以将js代码编写到外部js文件中，然后通过script标签引入，
+    这样可以在不同的页面中同时引用，也可以利用到浏览器的缓存机制，推荐使用-->
+    <script type="text/javascript" src="ex1.js">
+        alert("script标签一旦用于引入外部文件了，就不能再编写代码了，即使编写了浏览器也会忽略，如果需要可以再写一个新的标签")
+    </script>
+    <script>
+        // document.write('document可以向body中输出一个内容')
+        // alert('alert提示框')
+        // console.log('console向控制台输出一个内容')
+        alert("script标签一旦用于引入外部文件了，就不能再编写代码了，即使编写了浏览器也会忽略，如果需要可以再写一个新的标签")
+    </script>
+    <script>
+        /*
+        * 1.JS中严格区分大小写
+        * 2.JS中每一条语句以分号（;）结尾，如果不写，浏览器会自动添加，但是可能会加错分号，所以在开发中分号必须写。
+        * 3.JS中会忽略多个空格和换行，所以可以利用空格和换行对代码进行格式化
+         */
+    </script>
+</head>
+<body>
+<!--    <button onclick="alert('点击一下就会弹窗,button记得写在body里');">点我一下</button>-->
+<!--    <a href="javascript:alert('也可以写在标签的属性里，但属于结构与行为耦合，不方便维护');">超链接标签</a>-->
+</body>
+</html>

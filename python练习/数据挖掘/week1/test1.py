@@ -30,16 +30,17 @@ next(file) #略过第一行
 for i in file :
     for j in range(1,20):
         pingjunzhi[j] = pingjunzhi[j] + float(i[j].strip("%"))
-    if i[21] == "坦克":
-        zhanshishuxing.append(i) #战士属性列表
+    if i[21] == "战士":
+        zhanshishuxing.append(i) #职业属性列表
+
 for i in range(1,20):
-    pingjunzhi[i] = pingjunzhi[i] / 69
+    pingjunzhi[i] = pingjunzhi[i] / 69 #更新平均值
 
 for i in range(len(zhanshishuxing)):
     x.append(i)
 
-print(pingjunzhi)
-print(zhanshishuxing)
+# print(pingjunzhi)
+# print(zhanshishuxing)
 
 for i in zhanshishuxing:
     name.append(i[0])
@@ -48,7 +49,7 @@ for i in zhanshishuxing:
         y.append(((float(i[j].strip("%")) / pingjunzhi[j]) - 1 )*100)
     hero.append(y)
 
-print(hero)
+# print(hero)
 
 # for i in range(len(zhanshishuxing)):
 #     plt.plot(x,hero[i])
